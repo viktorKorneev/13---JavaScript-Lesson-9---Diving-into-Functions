@@ -64,3 +64,42 @@ const printBookAuthors = (books) => {
 };
 
 printBookAuthors(favoriteBooks);
+
+
+
+
+  const printCheapBooks = (books) => {
+    for (let i = 0; i < books.length; i++) {
+      const book = books[i]
+   
+      if (book.price < 30) {
+        console.log(`${book.title} - ${book.price}`)
+      }
+    }
+  } 
+
+  const logAuthor = (book) => {
+    console.log(book.author)
+  }
+   
+  const logCheapBooks = (book) => {
+    if (book.price < 30) {
+      console.log(`${book.title} - ${book.price}`)
+    }
+  }
+
+
+  const authors = (books)  => {
+    for (let i = 0; i < books.length; i++) {
+      const book = books[i]
+      logAuthor(book.author)
+    }
+  }
+
+  const prices = (books) => {
+    for (let i = 0; i < books.length; i++){
+        const book = books[i]
+        logCheapBooks(book.author)
+    }
+  }
+
