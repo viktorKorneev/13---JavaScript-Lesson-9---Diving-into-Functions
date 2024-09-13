@@ -39,12 +39,33 @@ const favoriteBooks = [
 favoriteBooks.forEach((book) => {
   console.log(book.author);
 });
-
+// ----------------------------------------
 const logAuthor = (book) => {
   console.log(book.author);
 };
 
 favoriteBooks.forEach(logAuthor);
+// --------------------------------------
+
+const programmingBook = favoriteBooks.filter((book) => {
+	return book.genre === 'Programming'
+})
+// -----------------------------------------
+
+const bookTitles = favoriteBooks.map((book) => {
+    return book.title
+  })
+// ---------------------------------------------
+
+const numbers = [10, 5, 100, 2, 1000]
+numbers.sort((prev, next) => {
+    return prev- next
+})
+console.log(numbers)
+
+
+
+
 
 // for (let i = 0; i < favoriteBooks.length; i++) {
 //   const book = favoriteBooks[i];
