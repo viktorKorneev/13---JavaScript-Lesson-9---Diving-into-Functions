@@ -85,21 +85,23 @@ printBookAuthors(favoriteBooks);
   const logCheapBooks = (book) => {
     if (book.price < 30) {
       console.log(`${book.title} - ${book.price}`)
-    }
+    } 
   }
 
 
   const authors = (books)  => {
     for (let i = 0; i < books.length; i++) {
       const book = books[i]
-      logAuthor(book.author)
+      logAuthor(book)
     }
   }
+(authors(favoriteBooks));
 
   const prices = (books) => {
     for (let i = 0; i < books.length; i++){
         const book = books[i]
-        logCheapBooks(book.author)
+        logCheapBooks(book)
     }
   }
+(prices(favoriteBooks));
 
