@@ -95,13 +95,14 @@ printBookAuthors(favoriteBooks);
       logAuthor(book)
     }
   }
-(authors(favoriteBooks));
+authors(favoriteBooks);
 
-  const prices = (books) => {
+  const prices = (books, fonc) => {
     for (let i = 0; i < books.length; i++){
         const book = books[i]
         logCheapBooks(book)
     }
   }
-(prices(favoriteBooks));
+prices(favoriteBooks, logAuthor);
+prices(favoriteBooks, logCheapBooks);
 
