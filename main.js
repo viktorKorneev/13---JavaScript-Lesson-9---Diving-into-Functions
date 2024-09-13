@@ -45,22 +45,22 @@ name();
 // function declaration
 function name(params) {}
 
-
 // fuction expression
-const name1 = function name(params) {
-    
-}
+const name1 = function name(params) {};
 
 // Стрелочные функции
-const name2 = (params) => {}
+const name2 = (params) => {};
 
-printBookAuthors(favoriteBooks)
+// printBookAuthors(favoriteBooks)
 
-const printBookAuthors = function printBookAuthors(books) {
-    for (let i = 0; i < books.length; i++) {
-      const book = books[i]
-      console.log(book.author)
-    }
+const printBookAuthors = (books) => {
+  let count = 0;
+  while (count < books.length) {
+    const book = books[count];
+
+    console.log(printBookAuthors);
+    count++;
   }
-   
-  printBookAuthors(favoriteBooks)
+};
+
+printBookAuthors(favoriteBooks);
