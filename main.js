@@ -36,73 +36,78 @@ const favoriteBooks = [
   },
 ];
 
-for (let i = 0; i < favoriteBooks.length; i++) {
-  const book = favoriteBooks[i];
+favoriteBooks.forEach((book) => {
   console.log(book.author);
-}
+});
 
-name();
-// function declaration
-function name(params) {}
-
-// fuction expression
-const name1 = function name(params) {};
-
-// Стрелочные функции
-const name2 = (params) => {};
-
-// printBookAuthors(favoriteBooks)
-
-const printBookAuthors = (books) => {
-  let count = 0;
-  while (count < books.length) {
-    const book = books[count];
-
-    console.log(printBookAuthors);
-    count++;
-  }
+const logAuthor = (book) => {
+  console.log(book.author);
 };
 
-printBookAuthors(favoriteBooks);
+favoriteBooks.forEach(logAuthor);
 
+// for (let i = 0; i < favoriteBooks.length; i++) {
+//   const book = favoriteBooks[i];
+//   console.log(book.author);
+// }
 
+// name();
+// // function declaration
+// function name(params) {}
 
+// // fuction expression
+// const name1 = function name(params) {};
 
-  const printCheapBooks = (books) => {
-    for (let i = 0; i < books.length; i++) {
-      const book = books[i]
-   
-      if (book.price < 30) {
-        console.log(`${book.title} - ${book.price}`)
-      }
-    }
-  } 
+// // Стрелочные функции
+// const name2 = (params) => {};
 
-  const logAuthor = (book) => {
-    console.log(book.author)
-  }
-   
-  const logCheapBooks = (book) => {
-    if (book.price < 30) {
-      console.log(`${book.title} - ${book.price}`)
-    } 
-  }
+// // printBookAuthors(favoriteBooks)
 
+// const printBookAuthors = (books) => {
+//   let count = 0;
+//   while (count < books.length) {
+//     const book = books[count];
 
-  const authors = (books)  => {
-    for (let i = 0; i < books.length; i++) {
-      const book = books[i]
-      logAuthor(book)
-    }
-  }
-authors(favoriteBooks);
+//     console.log(printBookAuthors);
+//     count++;
+//   }
+// };
 
-  const prices = (books, fonc) => {
-    for (let i = 0; i < books.length; i++){
-        const book = books[i]
-        logCheapBooks(book)
-    }
-  }
-prices(favoriteBooks, logAuthor);
-prices(favoriteBooks, logCheapBooks);
+// printBookAuthors(favoriteBooks);
 
+//   const printCheapBooks = (books) => {
+//     for (let i = 0; i < books.length; i++) {
+//       const book = books[i]
+
+//       if (book.price < 30) {
+//         console.log(`${book.title} - ${book.price}`)
+//       }
+//     }
+//   }
+
+//   const logAuthor = (book) => {
+//     console.log(book.author)
+//   }
+
+//   const logCheapBooks = (book) => {
+//     if (book.price < 30) {
+//       console.log(`${book.title} - ${book.price}`)
+//     }
+//   }
+
+//   const authors = (books)  => {
+//     for (let i = 0; i < books.length; i++) {
+//       const book = books[i]
+//       logAuthor(book)
+//     }
+//   }
+// authors(favoriteBooks);
+
+//   const prices = (books, func) => {
+//     for (let i = 0; i < books.length; i++){
+//         const book = books[i]
+//         func(book)
+//     }
+//   }
+// prices(favoriteBooks, logAuthor);
+// prices(favoriteBooks, logCheapBooks);
