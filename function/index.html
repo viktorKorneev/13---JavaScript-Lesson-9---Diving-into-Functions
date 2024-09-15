@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let migrating = true;
+
+let fly = function (num) {
+  for (let i = 0; i < num.length; i++) {
+    console.log("Flying!");
+  }
+};
+
+function quack(num) {
+  for (let i = 0; i < num.length; i++) {
+    console.log("Quack!");
+  }
+}
+
+if (migrating) {
+  quack(4);
+  fly(4);
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
