@@ -66,10 +66,21 @@ function processPassengers(passengers, testFunction) {
 }
 
 function checkNoFlyList(passenger) {
-  return (passenger.name === "Dr. Evel");
+  return passenger.name === "Dr. Evel";
 }
 
-function checkNotPaid (passenger) {
-  return (!passenger.paid);
+function checkNotPaid(passenger) {
+  return !passenger.paid;
 }
 
+let allCanFly = processPassengers(passengers, checkNoFlyList);
+if (!allCanFly) {
+  console.log(
+    "The plane can't take off: we have a passenger on the no-fly-list."
+  );
+}
+
+let allPaid = processPassengers(passengers, checkNotPaid);
+if (!allPaid) {
+  console.log("The plane can't take off: not everyone has paid.");
+}
