@@ -73,6 +73,14 @@ function checkNotPaid(passenger) {
   return !passenger.paid;
 }
 
+function printPassenger(passenger) {
+  if (passenger.paid) {
+    console.log(`${passenger.name} has paid`);
+  } else {
+    console.log(`${passenger.name} has not paid`);
+  }
+}
+
 let allCanFly = processPassengers(passengers, checkNoFlyList);
 if (!allCanFly) {
   console.log(
@@ -84,3 +92,5 @@ let allPaid = processPassengers(passengers, checkNotPaid);
 if (!allPaid) {
   console.log("The plane can't take off: not everyone has paid.");
 }
+
+processPassengers(passengers, printPassenger);
