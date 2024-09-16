@@ -55,3 +55,12 @@ let passengers = [
   { name: "Sue Property", paid: false },
   { name: "John Funcall", paid: true },
 ];
+
+function processPassengers(passengers, testFunction) {
+  for (let i = 0; i < passengers.length; i++) {
+    if (testFunction(passengers[i])) {
+      return false;
+    }
+  }
+  return true;
+}
