@@ -74,11 +74,11 @@ function checkNotPaid(passenger) {
 }
 
 function printPassenger(passenger) {
-  if (passenger.paid) {
-    console.log(`${passenger.name} has paid`);
-  } else {
-    console.log(`${passenger.name} has not paid`);
-  }
+  console.log(
+    passenger.paid
+      ? `${passenger.name} has paid`
+      : `${passenger.name} has not paid`
+  );
 }
 
 let allCanFly = processPassengers(passengers, checkNoFlyList);
