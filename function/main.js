@@ -22,28 +22,36 @@
 //   quack(4);
 //   fly(4);
 // }
+// ----------------------------------------
+// let winner = function () {
+//   console.log("WINNER!");
 
-let winner = function () {
-  console.log("WINNER!");
-  
-};
-let loser = function () {
-  console.log("LOSER!");
-};
+// };
+// let loser = function () {
+//   console.log("LOSER!");
+// };
 
-winner();
+// winner();
 
-let a = winner;
-let b = loser;
-let c = loser;
-a();
-b();
+// let a = winner;
+// let b = loser;
+// let c = loser;
+// a();
+// b();
 
-c = a;
-a = b;
-b = c;
-c = a;
-a = c;
-a = b;
-b = c;
-a();
+// c = a;
+// a = b;
+// b = c;
+// c = a;
+// a = c;
+// a = b;
+// b = c;
+// a();
+// ----------------------------------
+
+let passengers = [
+  { name: "Jane Doloop", paid: true },
+  { name: "Dr. Evel", paid: true },
+  { name: "Sue Property", paid: false },
+  { name: "John Funcall", paid: true },
+];
