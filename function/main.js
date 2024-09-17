@@ -81,6 +81,14 @@ function printPassenger(passenger) {
   );
 }
 
+function serveCustomer(passenger) {
+  if (passenger.ticket === "firstclass") {
+    alert("Would you like a cocktail or wine?");
+  } else {
+    alert("Your choice is cola or water.");
+  }
+}
+
 let allCanFly = processPassengers(passengers, checkNoFlyList);
 if (!allCanFly) {
   console.log(
