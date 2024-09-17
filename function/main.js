@@ -81,12 +81,22 @@ function printPassenger(passenger) {
   );
 }
 
-function serveCustomer(passenger) {
+function createDrinkOrder(passenger) {
+  let orderFunction;
   if (passenger.ticket === "firstclass") {
-    alert("Would you like a cocktail or wine?");
+    orderFunction = function () {
+      alert("Would you like a cocktail or wine?");
+    };
   } else {
-    alert("Your choice is cola or water.");
+    orderFunction = function () {
+      alert("Would you like a cocktail or wine?");
+    };
   }
+}
+
+function serveCustomer(passenger) {
+  let getDrinkOrderFunction = createDrinkOrder(passenger);
+  getDrinkOrderFunction();
 }
 
 let allCanFly = processPassengers(passengers, checkNoFlyList);
