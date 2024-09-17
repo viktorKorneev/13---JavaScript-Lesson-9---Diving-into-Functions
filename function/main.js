@@ -73,6 +73,8 @@ function checkNotPaid(passenger) {
   return !passenger.paid;
 }
 
+
+
 function printPassenger(passenger) {
   console.log(
     passenger.paid
@@ -89,15 +91,24 @@ function createDrinkOrder(passenger) {
     };
   } else {
     orderFunction = function () {
-      alert("Would you like a cocktail or wine?");
+      alert("You choice is cola or water.");
     };
   }
+  return orderFunction;
 }
 
 function serveCustomer(passenger) {
   let getDrinkOrderFunction = createDrinkOrder(passenger);
   getDrinkOrderFunction();
 }
+
+function servePassengers(passengers) {
+  for (let i = 0; i < passengers.length; i++) {
+    serveCustomer(passengers[i]);
+  }
+}
+
+servePassengers(passengers);
 
 let allCanFly = processPassengers(passengers, checkNoFlyList);
 if (!allCanFly) {
