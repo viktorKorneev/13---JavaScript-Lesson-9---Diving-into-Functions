@@ -50,10 +50,10 @@
 // ----------------------------------
 
 let passengers = [
-  { name: "Jane Doloop", paid: true },
-  { name: "Dr. Evel", paid: true },
-  { name: "Sue Property", paid: false },
-  { name: "John Funcall", paid: true },
+  { name: "Jane Doloop", paid: true, ticket: "coach" },
+  { name: "Dr. Evel", paid: true, ticket: "firstclass" },
+  { name: "Sue Property", paid: false, ticket: "firstclass" },
+  { name: "John Funcall", paid: true, ticket: "coach" },
 ];
 
 function processPassengers(passengers, testFunction) {
