@@ -152,7 +152,7 @@ let products = [
 ];
 
 function compareSold(colaA, colaB) {
-  if (colaA.sold > colaB) {
+  if (colaA.sold > colaB.sold) {
     return 1;
   } else if (colaA === colaB) {
     return 0;
@@ -161,4 +161,13 @@ function compareSold(colaA, colaB) {
   }
 }
 
+function printProducts(products) {
+  for (let i = 0; i < products.length; i++) {
+    console.log(
+      `Name ${products[i].name}, Calories: ${products[i].calories}, Color: ${products[i].color}, Sold: ${products[i].sold}`
+    );
+  }
+}
+
 products.sort(compareSold);
+printProducts(products);
