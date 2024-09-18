@@ -161,6 +161,26 @@ function compareSold(colaA, colaB) {
   }
 }
 
+function compareSold(colaA, colaB) {
+  if (colaA.name > colaB.name) {
+    return 1;
+  } else if (colaA === colaB) {
+    return 0;
+  } else {
+    return -1;
+  }
+}
+
+function compareSold(colaA, colaB) {
+  if (colaA.color > colaB.color) {
+    return 1;
+  } else if (colaA === colaB) {
+    return 0;
+  } else {
+    return -1;
+  }
+}
+
 function printProducts(products) {
   for (let i = 0; i < products.length; i++) {
     console.log(
@@ -168,6 +188,16 @@ function printProducts(products) {
     );
   }
 }
+
+// products.sort(compareSold);
+// printProducts(products);
+
+// products.sort(compareSold);
+// printProducts(products);
+
+
+// products.sort((a, b) => a.calories - b.calories);
+// printProducts(products);
 
 products.sort(compareSold);
 printProducts(products);
