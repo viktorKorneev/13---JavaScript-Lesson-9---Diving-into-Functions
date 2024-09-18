@@ -151,4 +151,14 @@ let products = [
   { name: "Water", calories: 0, color: "clear", sold: 62123 },
 ];
 
+function compareSold(colaA, colaB) {
+  if (colaA.sold > colaB) {
+    return 1;
+  } else if (colaA === colaB) {
+    return 0;
+  } else {
+    return -1;
+  }
+}
 
+products.sort(compareSold);
